@@ -64,6 +64,14 @@ require_once 'includes/dbinclude.php';
 </ul>
 <h1>Welcome to the search page</h1>
 
+<style>
+.button {
+	width: 60px;
+	height: 23px;
+	font-size: 15px;
+}
+</style>	
+	
 <form method="POST" action="searched.php">
 	<input type="text" name="search" placeholder="Search">
 	<button class="button" type="submit" name="submit">Submit</button>
