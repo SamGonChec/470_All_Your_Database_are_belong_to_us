@@ -1,15 +1,10 @@
 <?php
 require_once 'includes/dbinclude.php';
-
-
-	//$conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $username, $password);
 	$min = 1;
 	$max = 300;
 	$random = rand($min, $max);
 	$displayMovies = "select rmovie_title, rmovie_description, rmovie_director, ryear_published, rmovie_duration, rmovie_genre
 						from randomDailyMovie;";
-	// $displayMovies = "select movie_title, genre_name, movie_description, director_name, year_published, movie_duration,GROUP_CONCAT(genre_name) AS genre
-	//  					from movies LIMIT 1";
 	$query = mysqli_query($connection,$displayMovies);
 	if(!$query) {
 		echo mysqli_error($connection);
