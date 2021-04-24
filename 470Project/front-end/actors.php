@@ -1,15 +1,10 @@
+
 <?php
 require_once 'includes/dbinclude.php';
 
 try {
-	//$conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $username, $password);
-	/*$displayMovies = 'select movie_title, movie_description, movie_director_id, year_published, movie_duration
-							from movies';*/
 	$displayActors = 'select actor_fname, actor_lname, actor_dob, actor_dob_city, actor_dob_country
 						from actors';
-	//$displayActors = 'select * from actors where actor_name like "%James%";';			
-	// $query = $conn->query($displayActors);
-	// $query->setFetchMode(PDO::FETCH_ASSOC);
 	$query = mysqli_query($connection,$displayActors);
 	if(!$query) {
 		echo mysqli_error($connection);

@@ -1,3 +1,4 @@
+
 <?php
 require_once 'includes/dbinclude.php';
 	$min = 1;
@@ -52,5 +53,4 @@ require_once 'includes/dbinclude.php';
 			<?php } ?>
 		</table>
 </body>
-
 </html>

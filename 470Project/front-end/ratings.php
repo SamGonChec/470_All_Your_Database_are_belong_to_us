@@ -1,3 +1,4 @@
+
 <?php
 require_once 'includes/dbinclude.php';
 
@@ -55,5 +56,4 @@ try {
 
 	</table>
 </body>
-
 </html>
