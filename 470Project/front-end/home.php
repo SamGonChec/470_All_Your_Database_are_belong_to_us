@@ -22,14 +22,7 @@ require_once 'includes/dbinclude.php';
 </head>
 
 <body>
-	<ul>
-		<li><a href="home.php">Home</a></li>
-		<li><a href="movies.php">Movies</a></li>
-		<li><a href="actors.php">Actors</a></li>
-		<li><a href="ratings.php">Ratings</a></li>
-		<li><a href="insertActor.php">Submit an Actor</a></li>
-		<li><a href="searched.php">Search</a></li>
-	</ul>
+	<?php require_once 'includes/navBar.php'?>
 	<h1>Random Movie of the Day</h1>
 	<table class="table table-bordered" align="center">
 	<thead>
