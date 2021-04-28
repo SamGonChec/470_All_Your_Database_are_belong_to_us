@@ -1,6 +1,5 @@
 use db470;
 DELIMITER $$
-
 CREATE EVENT `dailyRandom_Movie`
     ON SCHEDULE EVERY 1 DAY STARTS "2021-04-21 16:00:00"
     DO BEGIN
@@ -18,6 +17,3 @@ CREATE EVENT `dailyRandom_Movie`
     END;
     
     $$
-DROP EVENT IF EXISTS `dailyRandom_Movie`;
-
-STARTS "2021-04-20 09:00:00"
