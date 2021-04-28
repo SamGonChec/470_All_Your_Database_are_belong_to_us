@@ -14,6 +14,7 @@ try {
 
 <head>
 	<link href="style/pageStyles.css" rel="stylesheet">
+	<title>Movie</title>
 </head>
 
 <body>

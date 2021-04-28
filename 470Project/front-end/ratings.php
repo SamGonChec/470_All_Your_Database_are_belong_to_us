@@ -18,6 +18,7 @@ try {
 
 <head>
 	<link href="style/pageStyles.css" rel="stylesheet">
+	<title>Ratings</title>
 </head>
 
 <body>

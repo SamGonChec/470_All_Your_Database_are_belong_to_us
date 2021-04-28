@@ -14,6 +14,7 @@
 <!DOCTYPE html>
 <head>
 <link href="style/pageStyles.css" rel="stylesheet">
+<title>Search Our Database</title>
 </head>
 <body>
 <?php require_once 'includes/navBar.php'?>

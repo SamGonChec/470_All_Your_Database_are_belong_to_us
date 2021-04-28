@@ -19,6 +19,7 @@ try {
 <head>
 	<link href="style/pageStyles.css" rel="stylesheet">
 	<script src="scripts/dynamicRows.js"></script>
+	<title>Actors</title>
 </head>
 
 <body>

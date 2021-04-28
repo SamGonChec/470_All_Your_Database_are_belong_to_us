@@ -18,7 +18,7 @@ require_once 'includes/dbinclude.php';
 
 <head>
 	<link href="style/pageStyles.css" rel="stylesheet">
-	<title></title>
+	<title>Home</title>
 </head>
 
 <body>

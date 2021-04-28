@@ -14,21 +14,25 @@
 <!DOCTYPE html>
 <head>
 <link href="style/pageStyles.css" rel="stylesheet">
+<title>Recommend Me a Movie</title>
 </head>
 <body>
 <?php require_once 'includes/navBar.php'?>
     <form action="recommendMe.php" method="post">
+        <label>Select Your Gender</label>
         <select name="gender">
             <option value="1">Male</option>
             <option value="0">Female</option>        
         </select>
         <br>
+        <label>Select Your Age Range</label>
         <select name="Age">
             <option value="0">0-25</option>
             <option value="1">26-55</option>
             <option value="2">55+</option>        
         </select>
         <br>
+        <label>Select The Genre You Wished Recommended</label>
         <select name="genre_id">
             <?php while($row = mysqli_fetch_array($genreQ)) {
                 echo '<option value="'. $row['genre_id'] .'">'. $row['genre_name'] .'</option>';
