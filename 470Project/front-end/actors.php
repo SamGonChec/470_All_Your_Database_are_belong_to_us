@@ -27,7 +27,6 @@ try {
 	<table class="table table-bordered" align="center">
 		<thead>
 			<tr>
-				<!--<th>Movie Genre</th>-->
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Date Of Birth</th>
@@ -44,12 +43,6 @@ try {
 					<td><?php echo htmlspecialchars($row['actor_dob']) ?></td>
 					<td><?php echo htmlspecialchars($row['actor_dob_city']) ?></td>
 					<td><?php echo htmlspecialchars($row['actor_dob_country']) ?></td>
-					<!--<td><?php echo htmlspecialchars($row['movie_duration']) ?></td>-->
-				</tr>
-				<!-- <tr id="<?php echo $i?>" >
-					<td><?php echo htmlspecialchars($row['actor_fname']) ?></td>
-				</tr> -->
-				<?php $i++ ?>
 			<?php endwhile; ?>
 		</tbody>
 

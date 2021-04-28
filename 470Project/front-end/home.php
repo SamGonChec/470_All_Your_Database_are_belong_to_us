@@ -23,6 +23,7 @@ require_once 'includes/dbinclude.php';
 
 <body>
 	<?php require_once 'includes/navBar.php'?>
+
 	<h1>Random Movie of the Day</h1>
 	<table class="table table-bordered" align="center">
 	<thead>
