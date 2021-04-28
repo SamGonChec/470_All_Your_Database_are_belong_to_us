@@ -3,12 +3,7 @@
 require_once 'includes/dbinclude.php';
 
 try {
-	$displayMovies = 'select movie_title, genre_name, movie_description, director_name, year_published, movie_duration,GROUP_CONCAT(genre_name) AS genre
-						from movies
-						INNER JOIN directors ON movies.movie_director_id = directors.director_id
-						INNER JOIN movie_genre ON movies.movie_id = movie_genre.movie_id_fk
-						INNER JOIN genres ON movie_genre.genre_id_fk = genres.genre_id
-						GROUP BY movie_id;';
+	$displayMovies = 'CALL GetMovies();';
 	$query = $query = mysqli_query($connection,$displayMovies);
 } catch (PDOException $exception) {
 	die("Could not connect to the database $dbname :" . $exception->getMessage());
@@ -27,7 +22,8 @@ try {
 		<li><a href="movies.php">Movies</a></li>
 		<li><a href="actors.php">Actors</a></li>
 		<li><a href="ratings.php">Ratings</a></li>
-		<li><a href="search.php">Search</a></li>
+		<li><a href="insertActor.php">Submit an Actor</a></li>
+		<li><a href="searched.php">Search</a></li>
 	</ul>
 	<table class="table table-bordered" align="center">
 		<thead>

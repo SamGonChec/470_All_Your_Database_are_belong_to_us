@@ -61,7 +61,7 @@ require_once 'includes/dbinclude.php';
 <li><a href="movies.php">Movies</a></li>
 <li><a href="actors.php">Actors</a></li>
 <li><a href="ratings.php">Ratings</a></li>
-<li><a href="search.php">Search</a></li>
+<li><a href="searched.php">Search</a></li>
 </ul>
 <h1>Welcome to the search page</h1>
 
@@ -79,7 +79,7 @@ require_once 'includes/dbinclude.php';
 </form>
 
 <?php
-		$query = mysqli_query($conn, $displayMovies) or die(mysql_error());
+		$query = mysqli_query($conn, $displayMovies);
 		$queryOutput = mysqli_num_rows($query);
 
 		/*if ($queryOutputs > 0){
