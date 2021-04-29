@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <head>
 <link href="style/pageStyles.css" rel="stylesheet">
+<title>Submit an Actor</title>
 </head>
 <body>
-    <ul>
-		<li><a href="home.php">Home</a></li>
-		<li><a href="movies.php">Movies</a></li>
-		<li><a href="actors.php">Actors</a></li>
-		<li><a href="ratings.php">Ratings</a></li>
-		<li><a href="insertActor.php">Submit an Actor</a></li>
-		<li><a href="searched.php">Search</a></li>
-	</ul>
+<?php require_once 'includes/navBar.php'?>
     <form action="includes/actorInserter.php" method="post">
-    
+        <label>First Name</label>
         <input type="text" name="actor_fname" placeholder="First Name">
+        <label>Last Name</label>
         <input type="text" name="actor_lname" placeholder="Last Name">
-        <input type="text" name="actor_dob" placeholder="Date of Birth">
+        <label>Date of Birth</label>
+        <input type="text" name="actor_dob" placeholder="Format YYYY-MM-DD">
+        <label>City and State</label>
         <input type="text" name="actor_dob_city" placeholder="city">
+        <label>Country</label>
         <input type="text" name="actor_dob_country" placeholder="country">
         <button type="submit" name="submit">Insert</button>
     </form>
