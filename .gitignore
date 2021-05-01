@@ -5,7 +5,9 @@ Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
-includes/dbinclude.php
+
+dbinclude.php
+
 
 # Dump file
 *.stackdump
