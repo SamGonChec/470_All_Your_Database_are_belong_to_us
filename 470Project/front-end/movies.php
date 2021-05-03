@@ -50,7 +50,7 @@ if(!$query) {
 					<td><?php echo htmlspecialchars($row['year_published']) ?></td>
 					<td><?php echo htmlspecialchars($row['movie_duration']) ?></td>
 					<td>
-						<form method="post" action="movies.php"><input type="text" name="<?php echo $row['movie_id'];?>" size="4" maxlength="4">
+						<form method="post" action="movies.php"><input type = "number" min = "1.0" max = "10.0" name="<?php echo $row['movie_id'];?>" size="4" maxlength="4">
 						<input type="submit" name="submit" value="Submit"></form>
 					</td>
 						<?php if(array_key_exists($row['movie_id'], $_POST)){
