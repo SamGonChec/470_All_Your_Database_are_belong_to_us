@@ -36,7 +36,7 @@ CREATE TABLE `movie_genre` (
   PRIMARY KEY (`movie_id_fk`,`genre_id_fk`),
   KEY `fk_genre` (`genre_id_fk`),
   CONSTRAINT `fk_genre` FOREIGN KEY (`genre_id_fk`) REFERENCES `genres` (`genre_id`),
-  CONSTRAINT `fk_movie_genre` FOREIGN KEY (`movie_id_fk`) REFERENCES `movies` (`movie_id`)
+  CONSTRAINT `fk_movie_genre` FOREIGN KEY (`movie_id_fk`) REFERENCES `movies` (`movie_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,4 +60,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-14 11:07:30
+-- Dump completed on 2021-05-06 20:55:58

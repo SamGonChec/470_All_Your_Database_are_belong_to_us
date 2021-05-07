@@ -38,7 +38,10 @@ CREATE TABLE `ratings` (
   `men_rating` double NOT NULL,
   `women_rating` double NOT NULL,
   PRIMARY KEY (`movie_id_fk`),
-  CONSTRAINT `fk_multiple_ratings_movies` FOREIGN KEY (`movie_id_fk`) REFERENCES `movies` (`movie_id`)
+  CONSTRAINT `fk_multiple_ratings_movies` FOREIGN KEY (`movie_id_fk`) REFERENCES `movies` (`movie_id`),
+  CONSTRAINT `Check_Adult` CHECK (((`adult_rating` >= 1) and (`adult_rating` <= 10))),
+  CONSTRAINT `Check_Elder` CHECK (((`elder_rating` >= 1) and (`elder_rating` <= 10))),
+  CONSTRAINT `Check_Teen` CHECK (((`teen_rating` >= 1) and (`teen_rating` <= 10)))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,4 +65,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-14 11:07:19
+-- Dump completed on 2021-05-06 20:55:52
